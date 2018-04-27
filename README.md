@@ -1,11 +1,34 @@
 # 2018-04-15: App Node con TypeScript, usando MySQL
 ## Basado en: 
+**0.0.3**
 - Hacker Noon - [Tutorial: Setting up Node.js with a database](https://hackernoon.com/setting-up-node-js-with-a-database-part-1-3f2461bdd77f)
 - [Knex](http://knexjs.org/) es un constructor de queries SQL. trabaja con varias BBDD relacionales.
 
+**0.0.4**
+Contenido usado para ordenar el código:
+- [RisingStack - Building a Node.js App with TypeScript Tutorial](https://blog.risingstack.com/building-a-node-js-app-with-typescript-tutorial/)
+
 ## Versiones:
-**0.0.3:** (2018-04-19) Practicamente una copia de la fuente proporcionada. Algunas modificaciones para adaptarlo a TypeScript. Las versiones anteriores a esta fueron intentos fallidos de usar TypeScript y ordernar el contenido en una forma más estricta. 
+**0.0.3:** (2018-04-19) Practicamente una copia de la fuente proporcionada. Algunas modificaciones para adaptarlo a TypeScript. Las versiones anteriores a esta fueron intentos fallidos de usar TypeScript y ordenar el contenido en una forma más estricta. 
 *Carpeta migrations:* es creación de **knex**, se usa knex para crear y migrar datos de la base de datos.
+
+**0.0.4** (2018-04-20) Distribución de contenido de *index.ts* y comprobar que app continúa funcionando.
+- Intenté aplicar orden creado una estructura:
+```
+    server.ts
+      - API
+        - controllers
+          + store.ts
+          + users.ts
+        + app.ts
+      - migrations
+      - public
+        + index.html
+        + app.js
+```
+- Debido a desconocimiento del uso de app.ts de la referencia*(RisingStack)*, tuve problemas en la implementación
+- Recien se configuró adecuadamente el archivo *tsconfig.json*
+- Modificación de *package.json* haciendo referencia a *server.ts*
 
 ## Indicaciones
 Seguir las indicaciones del tutorial. Se requiere tener instalado MySQL y crear una base de datos con su tabla, revisar el archivo *knexfile.js* para conocer los datos usados y cambiarlos por los que vaya a usar en su prueba.
