@@ -1,5 +1,20 @@
+import dotenv = require('dotenv');
+const environ: dotenv.DotenvResult = dotenv.config({ path: './src/variables.env' });
+if(environ.error) {
+    throw environ.error
+}
+
 const crypto = require('crypto');
-const knex = require('knex')(require('../../knexfile'));
+// const knex = require('knex')(require('../../knexfile'));
+const knex = require('knex')({
+    client: process.env.MYSQL_CLIENT,
+    connection: {
+        host: process.env.MYSQL_URI,
+        user: process.env.MYSQL_USER,
+        password: process.env.MYSQL_PASS,
+        database: process.env.MYSQL_DATABASE
+    }
+})
 
 const store = {
     createUser: ({ username, password }) => {

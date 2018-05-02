@@ -4,7 +4,7 @@
     "module": "commonjs",
     "sourceMap": true,
     "types": [
-      "node", "express", "morgan", "body-parser", "knex", "mysql"
+      "node", "express", "morgan", "body-parser", "knex", "mysql", "serve-favicon", "cors", "dotenv"
     ],
     "outDir": "dist",
     "removeComments": true
